@@ -12,14 +12,30 @@
 
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	int left, right;
-
 	if (!tree)
 		return (0);
 
-	left = tree && tree->left ? binary_tree_balance(tree->left) : -1;
+	return (height(tree->left) - height(tree->right));
+}
 
-	right = tree && tree->right ? binary_tree_balance(tree->right) : -1;
+/**
+* height - measures the height of a binary tree
+* @tree: pointer to the root node of the tree to be measured
+*
+* Description: The height of a binary tree is the number of edges
+* on the longest path from root to leaf
+* Return: a number denoting the size
+*/
 
-	return (left - right);
+int height(const binary_tree_t *tree)
+{
+	size_t h_lt, h_rt;
+
+	if (!tree)
+		return (-1);
+
+	h_lt = tree->left ? 1 + height(tree->left) : 0;
+	h_rt = tree->right ? 1 + height(tree->right) : 0;
+
+	return (h_lt > h_rt ? h_lt : h_rt);
 }
