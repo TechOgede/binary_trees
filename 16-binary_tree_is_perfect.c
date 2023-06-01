@@ -79,15 +79,12 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 		return (0);
 
 	height = binary_tree_height(tree);
-	printf("height: %ld\n", height);
+
 	max_size = _pow(2, (height + 1)) - 1;
-	printf("base: %ld\n", max_size);
 
 	size = binary_tree_size(tree);
-	printf("size:  %ld\n", size);
 
 	if (max_size == size)
 		return (1);
-
 	return (0);
 }
