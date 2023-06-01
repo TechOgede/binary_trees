@@ -66,7 +66,11 @@ size_t binary_tree_size(const binary_tree_t *tree)
 * binary_tree_is_perfect - checks if a binary tree is perfect
 * @tree: pointer to the root node of the tree
 *
-* Description: A perfect binary tree is one where each node
+* Description: A perfect binary tree is one that has the
+* maximum number of nodes. The max num of nodes is calculated
+* using, 2^(h+1) - 1, where h is the height (max depth)
+* of the tree.
+* Also, each non-leaf node of a perfect binary tree
 * has two children and the leaf nodes are at the same level
 * Return: 1 if binary tree is perfect, 0 othewise
 */
