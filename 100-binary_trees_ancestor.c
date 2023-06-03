@@ -18,6 +18,8 @@ const binary_tree_t *second)
 
 	if (!first || !second)
 		return (NULL);
+	if (first == second)
+		return ((binary_tree_t *)first);
 	depth_first = (int)binary_tree_depth(first);
 	depth_second = (int)binary_tree_depth(second);
 	parent_first = first->parent;
@@ -46,7 +48,6 @@ const binary_tree_t *second)
 		if (parent_first == second)
 			return (parent_first);
 		parent_first = parent_first->parent;
-
 		if (parent_second == first)
 			return (parent_second);
 		parent_second = parent_second->parent;
