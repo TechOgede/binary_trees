@@ -8,7 +8,7 @@
 *
 * Description: Dynamically allocates memory for a new node
 * and sets it to be the left-child of its parent.
-* if parent already has a left child, that child is set as the 
+* if parent already has a left child, that child is set as the
 * left child of the new node.
 * Return: pointer to the new node or NULL on failure
 */
