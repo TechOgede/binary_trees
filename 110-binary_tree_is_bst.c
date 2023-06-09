@@ -71,11 +71,9 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	printf("max_value in left st: %d\n", max_value(tree->left));
 	if (tree->left && max_value(tree->left) > tree->n)
 		return (0);
 
-	printf("min_value in right st: %d\n", min_value(tree->right));
 	if (tree->right && min_value(tree->right) < tree->n)
 		return (0);
 
