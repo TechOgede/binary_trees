@@ -60,8 +60,7 @@ size_t check_node_index(binary_tree_t *tree, size_t index, size_t size);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
-int max_value(binary_tree_t *tree);
-int min_value(binary_tree_t *tree);
+int check_nodes(binary_tree_t *tree, int min, int max);
 
 
 
